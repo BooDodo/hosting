@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonitaaaaa :3 </title>
+    <style>
+        .body{
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        h1{
+            color: rgb(186, 145, 224);
+            font-family: Ginebra;   
+        }
+        button{
+            background: black;
+            cursor: pointer;
+            border: none;
+            padding: 16px 32px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            border-radius: 12px;
+        }
+        button::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                45deg,
+                red, blue, deeppink, blue,
+                red, blue, deeppink, blue 
+            );
+            background-size: 800%;
+            border-radius: 10px;
+            filter: blur(8px);
+            animation: glowing 20s linear infinite;
+        }
+        @keyframes glowing{
+            0%{
+                background-position: 0 0;
+            }
+            50%{
+                background-position: 400% 0;
+            }
+            100%{
+                background-position: 0% 0;
+            }
+        }
+    </style>
+</head>
+<body class="body">
+    <h1 class="body_title">Trata de decir que NO :V</h1>
+    <img src="https://lh5.googleusercontent.com/HgVpwjdrrrNcdOBqCufkvfd7rUILz1lJoNtbLKCb2Utx8UnYUUGUvGJ2P22ysCQso5gplXXrxDmlDhllJV9Gc94lIEz1vV80puZvEidqu5EeLmR3E-teRoOzxHzUsHB-Hz1XhenzFe2F5hQ4Qyt0RSQ">
+    <br><br>
+    <button id="no">Noooo! 😛</button>spnb?spnb?spnb?
+    <button id="si">Premio Consuelo 😀</button>
+
+    <script>
+        const vutonsi = document.getElementById('si');
+        const vutonno = document.getElementById('no');
+
+        const accion = () => {
+            alert('Que paso? no pudiste decir que no? no te preocupes dale a aceptar Bonita');
+            location.href = 'https://www.youtube.com/watch?v=7d0TuT6sLNc';
+        }
+
+        const evitarno = () => {
+            vutonno.style.position = 'absolute';
+            vutonno.style.top = (Math.random()*window.innerHeight) + 'px';
+            vutonno.style.left = (Math.random()*window.innerWidth) + 'px';
+        }
+
+        vutonsi.addEventListener('click', accion);
+        vutonno.addEventListener('mouseover', evitarno);
+    </script>
+</body>
+</html>
